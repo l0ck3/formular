@@ -75,7 +75,13 @@ module Formular
 
           private
           def is_checked?
-            !options[:checked].nil? || reader_value == options[:value]
+            return true if !options[:checked].nil?
+
+            if reader_value.instance_of? Array
+              reader_value.include?(options[:value])
+            else
+              reader_value == options[:value]
+            end
           end
 
           def collection_base_options
