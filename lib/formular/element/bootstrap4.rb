@@ -46,8 +46,8 @@ module Formular
         end
       end # class Input
 
-      class Wrapper < Formular::Element::Fieldset
-        set_default :class, ['form-group']
+      class Wrapper < Formular::Element::Div
+        set_default :class, ['form-group fieldset']
       end # class Wrapper
 
       class ErrorWrapper < Formular::Element::Fieldset
