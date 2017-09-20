@@ -50,7 +50,7 @@ module Formular
         set_default :class, ['form-group fieldset']
       end # class Wrapper
 
-      class ErrorWrapper < Formular::Element::Fieldset
+      class ErrorWrapper < Formular::Element::Div
         set_default :class, ['form-group', 'has-danger']
       end # class Wrapper
     end # module Bootstrap3
